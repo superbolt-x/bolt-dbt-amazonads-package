@@ -17,13 +17,13 @@ sources:
       - name: ad_group_level_report
       
 models:
-  - name: _stg_googleads_ad_groups_insights 
+  - name: _stg_amazonads_ad_groups_insights 
     columns:
       - name: unique_key
         tests: 
           - unique
           - not_null
-  - name: googleads_performance_by_ad_group
+  - name: amazonads_performance_by_ad_group
     columns:
       - name: unique_key
         tests: 
