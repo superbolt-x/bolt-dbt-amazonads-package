@@ -115,7 +115,9 @@ WITH
         {% endfor -%}
     FROM 
         (SELECT
-            {{ selected_fields|join(", ") }}
+            id,
+            account_name,
+            currency_code
         FROM {{ source(schema_name, table_name) }})
     ),
 
