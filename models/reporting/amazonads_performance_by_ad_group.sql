@@ -151,7 +151,7 @@ WITH
     FROM ad_groups_staging),
     
     campaigns AS
-    (SELECT account_id, campaign_id, campaign_name, campaign_state
+    (SELECT profile_id, campaign_id, campaign_name, campaign_state
     FROM campaigns_staging),
     
     accounts AS
