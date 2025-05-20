@@ -120,7 +120,7 @@ WITH
     ),
 
 {%- set date_granularity_list = ['day','week','month','quarter','year'] -%}
-{%- set exclude_fields = ['date','unique_key'] -%}
+{%- set exclude_fields = ['date','unique_key','_fivetran_synced'] -%}
 {%- set dimensions = ['ad_group_id'] -%}
 {%- set measures = adapter.get_columns_in_relation(ref('_stg_amazonads_ad_groups_insights'))
                     |map(attribute="name")
