@@ -1,7 +1,7 @@
 {%- macro get_amazonads_clean_field(table_name, column_name) -%}
 
     {#- /* Apply to specific table */ -#}
-    {%- elif "profile" in table_name -%}
+    {%- if "profile" in table_name -%}
 
         {%- if column_name in ("id","currency_code") -%}
         {{column_name}} as profile_{{column_name}}
