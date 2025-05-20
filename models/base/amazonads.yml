@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: amazonads_raw
+    schema: amazonads_raw
+    freshness:
+        warn_after: {count: 2, period: hour}
+    loaded_at_field: _fivetran_synced
+    tables:
+      - name: accounts
+        identifier: profile
+      - name: campaigns
+        identifier: campaign_history
+      - name: campaign_level_report
+      - name: ad_groups
+        identifier: ad_group_history
+      - name: ad_group_level_report
+      
+models:
+  - name: _stg_googleads_ad_groups_insights 
+    columns:
+      - name: unique_key
+        tests: 
+          - unique
+          - not_null
+  - name: googleads_performance_by_ad_group
+    columns:
+      - name: unique_key
+        tests: 
+          - unique
