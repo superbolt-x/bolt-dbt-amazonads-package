@@ -72,7 +72,7 @@ WITH
         (SELECT
             {{ ad_selected_fields|join(", ") }},
             MAX(last_updated_date) OVER (PARTITION BY campaign_id, id) as last_updated_at
-        FROM {{ source(schema_name, ad_table_name) }})
+        FROM {{ source(schema_name, ad_group_table_name) }})
     WHERE last_updated_date = last_updated_at
     ),
 
