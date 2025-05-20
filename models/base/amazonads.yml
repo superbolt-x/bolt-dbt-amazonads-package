@@ -4,7 +4,7 @@ sources:
   - name: amazonads_raw
     schema: amazonads_raw
     freshness:
-        warn_after: {count: 2, period: hour}
+        warn_after: {count: 6, period: hour}
     loaded_at_field: _fivetran_synced
     tables:
       - name: accounts
