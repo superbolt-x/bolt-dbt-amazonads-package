@@ -109,7 +109,7 @@ WITH
 
     accounts_staging AS 
     (SELECT 
-        {% for field in selected_fields|reject("eq") -%}
+        {% for field in selected_fields -%}
         {{ get_amazonads_clean_field(table_name, field) }}
         {%- if not loop.last %},{%- endif %}
         {% endfor -%}
