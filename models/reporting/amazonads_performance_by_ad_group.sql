@@ -149,7 +149,7 @@ WITH
     {%- endfor %}
     
     ad_groups AS
-    (SELECT ad_group_id, campaign_id, ad_group_name, ad_group_state
+    (SELECT ad_group_id::INT as ad_group_id, campaign_id, ad_group_name, ad_group_state
     FROM ad_groups_staging),
     
     campaigns AS
