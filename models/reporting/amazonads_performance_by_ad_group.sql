@@ -105,7 +105,7 @@ WITH
     "account_name",
     "currency_code"
 ] -%}
-{%- set schema_name, table_name = 'amazonads_raw', 'accounts' -%}
+{%- set schema_name, table_name = 'amazonads_raw', 'profile' -%}
 
     accounts_staging AS 
     (SELECT 
