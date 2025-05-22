@@ -26,6 +26,12 @@ models:
         tests: 
           - unique
           - not_null
+  - name: _stg_amazonads_keywords_insights 
+    columns:
+      - name: unique_key
+        tests: 
+          - unique
+          - not_null
   - name: amazonads_performance_by_ad_group
     columns:
       - name: unique_key
