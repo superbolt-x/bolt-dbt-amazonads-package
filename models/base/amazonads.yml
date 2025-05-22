@@ -15,6 +15,9 @@ sources:
       - name: ad_groups
         identifier: ad_group_history
       - name: ad_group_level_report
+      - name: keywords
+        identifier: sb_keyword
+      - name: sb_keyword_report
       
 models:
   - name: _stg_amazonads_ad_groups_insights 
@@ -24,6 +27,11 @@ models:
           - unique
           - not_null
   - name: amazonads_performance_by_ad_group
+    columns:
+      - name: unique_key
+        tests: 
+          - unique
+  - name: amazonads_performance_by_keyword
     columns:
       - name: unique_key
         tests: 
