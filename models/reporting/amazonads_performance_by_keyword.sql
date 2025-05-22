@@ -69,7 +69,7 @@ WITH
         {{ get_amazonads_clean_field(keyword_table_name, field) }}
         {%- if not loop.last %},{%- endif %}
         {% endfor -%}
-    FROM {{ source(schema_name, keyword_table_name) }})
+    FROM {{ source(schema_name, keyword_table_name) }}
     ),
 
   
