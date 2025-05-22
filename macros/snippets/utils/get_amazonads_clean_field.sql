@@ -36,6 +36,9 @@
         {%- if column_name in ("id","match_type","state","bid") -%}
         {{column_name}} as keyword_{{column_name}}
 
+        {%- elif column_name in ("report_date") -%}
+        {{column_name}} as date
+
         {%- else -%}
         {{column_name}}
         
