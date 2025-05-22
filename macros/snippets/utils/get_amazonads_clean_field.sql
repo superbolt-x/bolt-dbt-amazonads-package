@@ -31,6 +31,16 @@
         
         {%- endif -%}
 
+    {%- elif "keyword" in table_name -%}
+
+        {%- if column_name in ("id","match_type","state","bid") -%}
+        {{column_name}} as keyword_{{column_name}}
+
+        {%- else -%}
+        {{column_name}}
+        
+        {%- endif -%}
+
 
     {%- else -%}
     {{column_name}}
