@@ -66,7 +66,7 @@ WITH
     keywords_staging AS 
     (SELECT 
         {% for field in selected_fields -%}
-        {{ get_amazonads_clean_field(ad_group_table_name, field) }}
+        {{ get_amazonads_clean_field(keyword_table_name, field) }}
         {%- if not loop.last %},{%- endif %}
         {% endfor -%}
     FROM {{ source(schema_name, keyword_table_name) }})
