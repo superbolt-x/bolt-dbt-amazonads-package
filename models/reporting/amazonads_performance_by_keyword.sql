@@ -61,7 +61,7 @@ WITH
     "bid"
 ] -%}
 
-{%- set schema_name, keyword_table_name = 'amazonads_raw', 'sb_keyword' -%}
+{%- set schema_name, keyword_table_name = 'amazonads_raw', 'keywords' -%}
 
     keywords_staging AS 
     (SELECT 
